@@ -1,0 +1,28 @@
+2024-11-26 11:58:08,857 - INFO - Use pytorch device_name: cpu
+2024-11-26 11:58:08,857 - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2024-11-26 11:58:15,165 - INFO - Use pytorch device_name: cpu
+2024-11-26 11:58:15,165 - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2024-11-26 11:58:19,264 - INFO - Processing query: গত মাসে কতগুলি সড়ক দুর্ঘটনা ঘটেছে?
+2024-11-26 14:13:23,798 - ERROR - Error processing query 'গত মাসে কতগুলি সড়ক দুর্ঘটনা ঘটেছে?': 'NoneType' object is not subscriptable
+2024-11-26 14:13:23,815 - ERROR - Traceback (most recent call last):
+  File "/home/abir/Documents/repos/bangla-RAG/rag.py", line 241, in main
+    response = rag_system.process_query(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abir/Documents/repos/bangla-RAG/rag.py", line 194, in process_query
+    relevant_articles = self.semantic_search(query, articles)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abir/Documents/repos/bangla-RAG/rag.py", line 85, in semantic_search
+    article_embeddings = self.embedding_model.encode(article_texts)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abir/anaconda3/envs/rag/lib/python3.12/site-packages/sentence_transformers/SentenceTransformer.py", line 591, in encode
+    features = self.tokenize(sentences_batch)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abir/anaconda3/envs/rag/lib/python3.12/site-packages/sentence_transformers/SentenceTransformer.py", line 1050, in tokenize
+    return self._first_module().tokenize(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abir/anaconda3/envs/rag/lib/python3.12/site-packages/sentence_transformers/models/Transformer.py", line 445, in tokenize
+    batch1.append(text_tuple[0])
+                  ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+2024-11-26 14:13:23,981 - INFO - Processing query: করোনা ভাইরাসের সর্বশেষ তথ্য কী?

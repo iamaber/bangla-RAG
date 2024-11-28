@@ -1,0 +1,30 @@
+# Core Python Libraries
+pandas
+numpy
+scipy
+
+# SQL Database Libraries
+sqlalchemy
+pymysql
+
+# NLP Libraries
+transformers
+sentence-transformers
+keybert
+spacy
+bangla # Optional: for Bangla text processing
+
+# Vector Store
+faiss-cpu
+pinecone-client # Only if using Pinecone (optional)
+
+# RAG Frameworks
+langchain
+llama-index # Formerly known as GPT Index
+
+# Deployment and Frontend
+streamlit
+
+# Others
+requests
+tqdm
